@@ -1,0 +1,86 @@
+import { AudioAssetDefinition } from "@/services/audio/types";
+
+/**
+ * Sound Effects Manifest for Koki.
+ *
+ * All SFX are subtle, friendly, and non-distracting.
+ */
+export const SFX_MANIFEST: Record<string, AudioAssetDefinition> = {
+  sfx_correct_chime: {
+    key: "sfx_correct_chime",
+    locale: "none",
+    voice: "sfx",
+    category: "sfx",
+    file: require("../files/sfx_correct_chime_v1.m4a"),
+    transcript: "Cheerful correct chime",
+    reviewStatus: "approved",
+    durationMs: 550,
+    version: 1,
+  },
+  sfx_incorrect_gentle: {
+    key: "sfx_incorrect_gentle",
+    locale: "none",
+    voice: "sfx",
+    category: "sfx",
+    file: require("../files/sfx_incorrect_gentle_v1.m4a"),
+    transcript: "Gentle soft retry bounce",
+    reviewStatus: "approved",
+    durationMs: 400,
+    version: 1,
+  },
+  sfx_star_pop: {
+    key: "sfx_star_pop",
+    locale: "none",
+    voice: "sfx",
+    category: "sfx",
+    file: require("../files/sfx_star_pop_v1.m4a"),
+    transcript: "Star sparkle reveal chime",
+    reviewStatus: "approved",
+    durationMs: 450,
+    version: 1,
+  },
+  sfx_coin_earned: {
+    key: "sfx_coin_earned",
+    locale: "none",
+    voice: "sfx",
+    category: "sfx",
+    file: require("../files/sfx_coin_earned_v1.m4a"),
+    transcript: "Bright coin collected ping",
+    reviewStatus: "approved",
+    durationMs: 400,
+    version: 1,
+  },
+  sfx_treasure_open: {
+    key: "sfx_treasure_open",
+    locale: "none",
+    voice: "sfx",
+    category: "sfx",
+    file: require("../files/sfx_treasure_open_v1.m4a"),
+    transcript: "Treasure chest unlock fanfare",
+    reviewStatus: "approved",
+    durationMs: 800,
+    version: 1,
+  },
+  sfx_achievement_unlock: {
+    key: "sfx_achievement_unlock",
+    locale: "none",
+    voice: "sfx",
+    category: "sfx",
+    file: require("../files/sfx_achievement_unlock_v1.m4a"),
+    transcript: "Milestone achievement fanfare",
+    reviewStatus: "approved",
+    durationMs: 900,
+    version: 1,
+  },
+  sfx_tap: {
+    key: "sfx_tap",
+    locale: "none",
+    voice: "sfx",
+    category: "sfx",
+    file: require("../files/sfx_tap_v1.m4a"),
+    transcript: "Subtle tactile button click",
+    reviewStatus: "approved",
+    durationMs: 30,
+    version: 1,
+  },
+};

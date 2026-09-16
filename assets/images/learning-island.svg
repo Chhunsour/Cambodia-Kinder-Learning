@@ -1,0 +1,1053 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%" role="img" aria-label="Animated Floating Learning Island">
+  <defs>
+    <!-- CSS Animations -->
+    <style>
+      /* Float Island Animation */
+      .anim-island {
+        animation: floatIsland 5.6s ease-in-out infinite;
+      }
+      @keyframes floatIsland {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-16px);
+        }
+      }
+
+      /* Island Ground Shadow Dynamic Scaling */
+      .anim-shadow {
+        transform-origin: 400px 725px;
+        animation: shadowPulse 5.6s ease-in-out infinite;
+      }
+      @keyframes shadowPulse {
+        0%, 100% {
+          transform: scale(1);
+          opacity: 0.85;
+        }
+        50% {
+          transform: scale(0.86, 0.82);
+          opacity: 0.52;
+        }
+      }
+
+      /* Clouds Drifting */
+      .anim-cloud-back {
+        transform-origin: 105px 275px;
+        animation: driftCloudBack 8.8s ease-in-out infinite;
+      }
+      @keyframes driftCloudBack {
+        0%, 100% {
+          transform: translate(0px, 0px);
+        }
+        50% {
+          transform: translate(26px, -6px);
+        }
+      }
+
+      .anim-cloud-front {
+        transform-origin: 640px 505px;
+        animation: driftCloudFront 9.6s ease-in-out infinite;
+      }
+      @keyframes driftCloudFront {
+        0%, 100% {
+          transform: translate(0px, 0px);
+        }
+        50% {
+          transform: translate(-28px, 6px);
+        }
+      }
+
+      .anim-cloud-high {
+        transform-origin: 145px 125px;
+        animation: driftCloudHigh 7.4s ease-in-out infinite;
+      }
+      @keyframes driftCloudHigh {
+        0%, 100% {
+          transform: translate(0px, 0px);
+        }
+        50% {
+          transform: translate(18px, 5px);
+        }
+      }
+
+      /* Floating Golden Stars (Independent bobbing and rotating) */
+      .anim-star-1 {
+        transform-origin: 185px 235px;
+        animation: starFloat1 3.8s ease-in-out infinite;
+      }
+      @keyframes starFloat1 {
+        0%, 100% {
+          transform: translateY(0px) rotate(-4deg);
+        }
+        50% {
+          transform: translateY(-13px) rotate(6deg);
+        }
+      }
+
+      .anim-star-2 {
+        transform-origin: 625px 215px;
+        animation: starFloat2 4.4s ease-in-out infinite 0.6s;
+      }
+      @keyframes starFloat2 {
+        0%, 100% {
+          transform: translateY(0px) rotate(5deg);
+        }
+        50% {
+          transform: translateY(-15px) rotate(-5deg);
+        }
+      }
+
+      .anim-star-3 {
+        transform-origin: 365px 145px;
+        animation: starFloat3 3.3s ease-in-out infinite 1.1s;
+      }
+      @keyframes starFloat3 {
+        0%, 100% {
+          transform: translateY(0px) rotate(-2deg) scale(0.96);
+        }
+        50% {
+          transform: translateY(-10px) rotate(7deg) scale(1.04);
+        }
+      }
+
+      /* Active Lesson Node: Soft Rhythmic Breathing */
+      .anim-active-node {
+        transform-origin: 405px 406px;
+        animation: activePulse 2.4s ease-in-out infinite;
+      }
+      @keyframes activePulse {
+        0%, 100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.06) translateY(-2px);
+        }
+      }
+
+      /* Active Lesson Node: Beacon Radar Rings */
+      .anim-pulse-ring-1 {
+        transform-origin: 405px 408px;
+        animation: radarRing 2.4s cubic-bezier(0.1, 0.7, 0.3, 1) infinite;
+      }
+      .anim-pulse-ring-2 {
+        transform-origin: 405px 408px;
+        animation: radarRing 2.4s cubic-bezier(0.1, 0.7, 0.3, 1) infinite 1.1s;
+      }
+      @keyframes radarRing {
+        0% {
+          transform: scale(0.9);
+          opacity: 0.85;
+          stroke-width: 3.5px;
+        }
+        70% {
+          transform: scale(1.48);
+          opacity: 0;
+          stroke-width: 1px;
+        }
+        100% {
+          transform: scale(1.48);
+          opacity: 0;
+        }
+      }
+
+      /* Completed Lesson Node: Occasional Sparkle Burst */
+      .anim-completed-sparkle {
+        transform-origin: 284px 438px;
+        animation: sparkleBurst 4.2s ease-in-out infinite;
+      }
+      @keyframes sparkleBurst {
+        0%, 65% {
+          transform: scale(0) rotate(0deg);
+          opacity: 0;
+        }
+        72% {
+          transform: scale(1.25) rotate(50deg);
+          opacity: 1;
+        }
+        80% {
+          transform: scale(0.9) rotate(90deg);
+          opacity: 0.85;
+        }
+        90%, 100% {
+          transform: scale(0) rotate(140deg);
+          opacity: 0;
+        }
+      }
+
+      /* Flowers: Extremely Subtle Organic Swaying */
+      .anim-flower-1 {
+        transform-origin: 215px 485px;
+        animation: flowerSwayLeft 3.6s ease-in-out infinite;
+      }
+      .anim-flower-2 {
+        transform-origin: 342px 475px;
+        animation: flowerSwayRight 4.2s ease-in-out infinite 0.7s;
+      }
+      .anim-flower-3 {
+        transform-origin: 590px 360px;
+        animation: flowerSwayLeft 3.9s ease-in-out infinite 1.3s;
+      }
+      @keyframes flowerSwayLeft {
+        0%, 100% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(-5deg);
+        }
+      }
+      @keyframes flowerSwayRight {
+        0%, 100% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(6deg);
+        }
+      }
+
+      /* Ambient Twinkle Sparkles */
+      .anim-twinkle-1 {
+        transform-origin: 140px 205px;
+        animation: twinkle 2.6s ease-in-out infinite 0.2s;
+      }
+      .anim-twinkle-2 {
+        transform-origin: 680px 185px;
+        animation: twinkle 3.1s ease-in-out infinite 0.9s;
+      }
+      .anim-twinkle-3 {
+        transform-origin: 315px 125px;
+        animation: twinkle 2.4s ease-in-out infinite 1.4s;
+      }
+      .anim-twinkle-4 {
+        transform-origin: 465px 382px;
+        animation: twinkle 2.8s ease-in-out infinite 0.5s;
+      }
+      .anim-twinkle-5 {
+        transform-origin: 475px 595px;
+        animation: twinkle 3.3s ease-in-out infinite 1.8s;
+      }
+      @keyframes twinkle {
+        0%, 100% {
+          transform: scale(0.2) rotate(0deg);
+          opacity: 0.08;
+        }
+        50% {
+          transform: scale(1.15) rotate(45deg);
+          opacity: 0.95;
+        }
+      }
+
+      /* Accessibility: Respect Reduced Motion */
+      @media (prefers-reduced-motion: reduce) {
+        *, ::before, ::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+
+    <!-- Gradients -->
+
+    <!-- Island Ground Shadows -->
+    <radialGradient id="shadowFloor" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#475569" stop-opacity="0.32" />
+      <stop offset="60%" stop-color="#475569" stop-opacity="0.16" />
+      <stop offset="100%" stop-color="#475569" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="shadowFloorCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#334155" stop-opacity="0.4" />
+      <stop offset="70%" stop-color="#334155" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#334155" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Earth Underbelly Gradients -->
+    <linearGradient id="earthBase" x1="20%" y1="10%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#92400e" />
+      <stop offset="45%" stop-color="#78350f" />
+      <stop offset="85%" stop-color="#5c2707" />
+      <stop offset="100%" stop-color="#451a03" />
+    </linearGradient>
+
+    <linearGradient id="earthHighlightLedge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde68a" />
+      <stop offset="60%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#92400e" />
+    </linearGradient>
+
+    <linearGradient id="earthStratumWarm" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="50%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+
+    <linearGradient id="earthStratumCream" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb" />
+      <stop offset="40%" stop-color="#fed7aa" />
+      <stop offset="100%" stop-color="#fcd34d" />
+    </linearGradient>
+
+    <linearGradient id="goldOre" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#facc15" />
+      <stop offset="100%" stop-color="#ca8a04" />
+    </linearGradient>
+
+    <!-- Grass Plateau and Overhang Gradients -->
+    <linearGradient id="grassPlateau" x1="15%" y1="5%" x2="85%" y2="95%">
+      <stop offset="0%" stop-color="#a7f3d0" />
+      <stop offset="25%" stop-color="#4ade80" />
+      <stop offset="70%" stop-color="#22c55e" />
+      <stop offset="100%" stop-color="#15803d" />
+    </linearGradient>
+
+    <linearGradient id="grassOverhangRim" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e" />
+      <stop offset="60%" stop-color="#16a34a" />
+      <stop offset="100%" stop-color="#14532d" />
+    </linearGradient>
+
+    <linearGradient id="grassShadowUnderside" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#14532d" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#451a03" stop-opacity="0" />
+    </linearGradient>
+
+    <radialGradient id="grassHillHighlight" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#bbf7d0" stop-opacity="0.6" />
+      <stop offset="60%" stop-color="#86efac" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Winding Pathway and Stepping Stones -->
+    <linearGradient id="stoneSurface" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#fef3c7" />
+      <stop offset="100%" stop-color="#fed7aa" />
+    </linearGradient>
+
+    <linearGradient id="stoneBevel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fde68a" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+
+    <!-- Nature Assets: Tree, Foliage and Bush -->
+    <linearGradient id="treeFoliage" x1="20%" y1="10%" x2="80%" y2="90%">
+      <stop offset="0%" stop-color="#86efac" />
+      <stop offset="40%" stop-color="#22c55e" />
+      <stop offset="100%" stop-color="#14532d" />
+    </linearGradient>
+
+    <linearGradient id="treeTrunk" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a16207" />
+      <stop offset="60%" stop-color="#78350f" />
+      <stop offset="100%" stop-color="#451a03" />
+    </linearGradient>
+
+    <linearGradient id="bushFoliage" x1="20%" y1="10%" x2="80%" y2="90%">
+      <stop offset="0%" stop-color="#4ade80" />
+      <stop offset="70%" stop-color="#16a34a" />
+      <stop offset="100%" stop-color="#14532d" />
+    </linearGradient>
+
+    <!-- Lesson Nodes: Completed Node 1 (Fresh Green) -->
+    <linearGradient id="nodeGreenDome" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#6ee7b7" />
+      <stop offset="35%" stop-color="#34d399" />
+      <stop offset="75%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+
+    <linearGradient id="nodeGreenPedestal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#064e3b" />
+    </linearGradient>
+
+    <!-- Lesson Nodes: Active Node 2 (Warm Orange) -->
+    <linearGradient id="nodeOrangeDome" x1="25%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa" />
+      <stop offset="30%" stop-color="#fb923c" />
+      <stop offset="75%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </linearGradient>
+
+    <linearGradient id="nodeOrangePedestal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c2410c" />
+      <stop offset="100%" stop-color="#7c2d12" />
+    </linearGradient>
+
+    <radialGradient id="nodeOrangePulseGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="60%" stop-color="#fb923c" stop-opacity="0.4" />
+      <stop offset="85%" stop-color="#f97316" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="pulseRingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa" />
+      <stop offset="50%" stop-color="#fb923c" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+
+    <!-- Lesson Nodes: Locked Node 3 (Slate and Stone) -->
+    <linearGradient id="nodeSlateDome" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#cbd5e1" />
+      <stop offset="40%" stop-color="#94a3b8" />
+      <stop offset="80%" stop-color="#64748b" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+
+    <linearGradient id="nodeSlatePedestal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#475569" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+
+    <!-- Golden Padlock Gradients -->
+    <linearGradient id="padlockGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="45%" stop-color="#fbbf24" />
+      <stop offset="85%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+
+    <linearGradient id="padlockShackle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fef9c3" />
+      <stop offset="40%" stop-color="#fde047" />
+      <stop offset="80%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#92400e" />
+    </linearGradient>
+
+    <!-- Floating 3D Golden Stars -->
+    <linearGradient id="starGoldFace" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb" />
+      <stop offset="25%" stop-color="#fef08a" />
+      <stop offset="60%" stop-color="#fbbf24" />
+      <stop offset="90%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+
+    <linearGradient id="starGoldBase" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b45309" />
+      <stop offset="100%" stop-color="#78350f" />
+    </linearGradient>
+
+    <!-- Clouds Gradients -->
+    <linearGradient id="cloudGrad" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="65%" stop-color="#f0f9ff" />
+      <stop offset="100%" stop-color="#bae6fd" />
+    </linearGradient>
+
+    <linearGradient id="cloudWarmBounce" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="70%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#fed7aa" stop-opacity="0.35" />
+    </linearGradient>
+
+    <!-- Flowers and Flora Gradients -->
+    <linearGradient id="petalBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7dd3fc" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <linearGradient id="petalOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+
+    <linearGradient id="petalCream" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#fef3c7" />
+    </linearGradient>
+
+    <!-- Sparkle Diamond -->
+    <linearGradient id="sparkleLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="60%" stop-color="#fef08a" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <!-- Clip Paths and Masks -->
+    <clipPath id="grassPlateauClip">
+      <path d="M 170 420 C 170 355, 250 325, 340 318 C 420 312, 500 298, 560 306 C 615 314, 638 360, 630 410 C 625 435, 595 455, 560 460 C 530 465, 490 472, 450 480 C 400 490, 350 492, 300 480 C 250 470, 200 465, 178 440 C 170 430, 170 425, 170 420 Z" />
+    </clipPath>
+  </defs>
+
+  <!-- ==================== BACKGROUND ATMOSPHERE and CLOUDS ==================== -->
+  
+  <!-- High Floating Cloud (Top Left) -->
+  <g id="cloud-high" class="anim-cloud-high">
+    <rect x="115" y="120" width="60" height="20" rx="10" fill="url(#cloudGrad)" opacity="0.88" />
+    <circle cx="134" cy="116" r="14" fill="url(#cloudGrad)" opacity="0.88" />
+    <circle cx="154" cy="118" r="11" fill="url(#cloudGrad)" opacity="0.88" />
+    <!-- Highlight -->
+    <path d="M 126 114 C 130 108, 140 108, 144 114" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.8" />
+  </g>
+
+  <!-- Large Fluffy Cloud (Back Left behind Island) -->
+  <g id="cloud-back" class="anim-cloud-back">
+    <rect x="65" y="268" width="95" height="32" rx="16" fill="url(#cloudGrad)" opacity="0.82" />
+    <circle cx="88" cy="262" r="20" fill="url(#cloudGrad)" opacity="0.82" />
+    <circle cx="114" cy="248" r="26" fill="url(#cloudGrad)" opacity="0.82" />
+    <circle cx="138" cy="265" r="18" fill="url(#cloudGrad)" opacity="0.82" />
+    <!-- Soft bounce shadow on cloud base -->
+    <path d="M 75 284 C 95 292, 135 292, 150 284" stroke="#93c5fd" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.4" />
+    <!-- Sunlit highlight rim -->
+    <path d="M 98 238 C 112 232, 126 238, 134 246" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.9" />
+  </g>
+
+  <!-- Ambient Sky Sparkles (Back layer) -->
+  <path id="sparkle-back-1" class="anim-twinkle-1" d="M 140.00 192.00 Q 140.00 205.00 153.00 205.00 Q 140.00 205.00 140.00 218.00 Q 140.00 205.00 127.00 205.00 Q 140.00 205.00 140.00 192.00 Z" fill="url(#sparkleLight)" />
+  <path id="sparkle-back-2" class="anim-twinkle-3" d="M 315.00 114.00 Q 315.00 125.00 326.00 125.00 Q 315.00 125.00 315.00 136.00 Q 315.00 125.00 304.00 125.00 Q 315.00 125.00 315.00 114.00 Z" fill="url(#sparkleLight)" />
+
+  <!-- Floating Golden Star 3 (Top Center, Cute Small) -->
+  <g id="star-3" class="anim-star-3">
+    <g transform="translate(365, 145)">
+      <!-- 3D Base -->
+      <path d="M -1.38 -12.41 Q 0.00 -15.20 1.38 -12.41 L 3.91 -7.27 Q 5.29 -4.48 8.37 -4.03 L 14.04 -3.21 Q 17.12 -2.76 14.89 -0.59 L 10.78 3.41 Q 8.56 5.58 9.08 8.64 L 10.05 14.30 Q 10.58 17.36 7.83 15.92 L 2.75 13.25 Q 0.00 11.80 -2.75 13.25 L -7.83 15.92 Q -10.58 17.36 -10.05 14.30 L -9.08 8.64 Q -8.56 5.58 -10.78 3.41 L -14.89 -0.59 Q -17.12 -2.76 -14.04 -3.21 L -8.37 -4.03 Q -5.29 -4.48 -3.91 -7.27 Z" fill="url(#starGoldBase)" />
+      <!-- Star Face -->
+      <path d="M -1.38 -15.21 Q 0.00 -18.00 1.38 -15.21 L 3.91 -10.07 Q 5.29 -7.28 8.37 -6.83 L 14.04 -6.01 Q 17.12 -5.56 14.89 -3.39 L 10.78 0.61 Q 8.56 2.78 9.08 5.84 L 10.05 11.50 Q 10.58 14.56 7.83 13.12 L 2.75 10.45 Q 0.00 9.00 -2.75 10.45 L -7.83 13.12 Q -10.58 14.56 -10.05 11.50 L -9.08 5.84 Q -8.56 2.78 -10.78 0.61 L -14.89 -3.39 Q -17.12 -5.56 -14.04 -6.01 L -8.37 -6.83 Q -5.29 -7.28 -3.91 -10.07 Z" fill="url(#starGoldFace)" stroke="#fef08a" stroke-width="0.8" />
+      <!-- Pillowy Highlight -->
+      <path d="M -2 -14 Q 0 -17 2 -14" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.85" />
+      <circle cx="-1" cy="-4" r="2" fill="#ffffff" opacity="0.75" />
+    </g>
+  </g>
+
+  <!-- Floating Golden Star 1 (Hero Left, Large) -->
+  <g id="star-1" class="anim-star-1">
+    <g transform="translate(185, 235)">
+      <!-- 3D Bevel Base -->
+      <path d="M -2.45 -22.55 Q 0.00 -27.50 2.45 -22.55 L 6.96 -13.40 Q 9.40 -8.44 14.87 -7.65 L 24.97 -6.18 Q 30.43 -5.39 26.48 -1.53 L 19.17 5.59 Q 15.22 9.44 16.15 14.89 L 17.88 24.94 Q 18.81 30.39 13.92 27.82 L 4.89 23.07 Q 0.00 20.50 -4.89 23.07 L -13.92 27.82 Q -18.81 30.39 -17.88 24.94 L -16.15 14.89 Q -15.22 9.44 -19.17 5.59 L -26.48 -1.53 Q -30.43 -5.39 -24.97 -6.18 L -14.87 -7.65 Q -9.40 -8.44 -6.96 -13.40 Z" fill="url(#starGoldBase)" />
+      <!-- Front Star Face -->
+      <path d="M -2.45 -27.05 Q 0.00 -32.00 2.45 -27.05 L 6.96 -17.90 Q 9.40 -12.94 14.87 -12.15 L 24.97 -10.68 Q 30.43 -9.89 26.48 -6.03 L 19.17 1.09 Q 15.22 4.94 16.15 10.39 L 17.88 20.44 Q 18.81 25.89 13.92 23.32 L 4.89 18.57 Q 0.00 16.00 -4.89 18.57 L -13.92 23.32 Q -18.81 25.89 -17.88 20.44 L -16.15 10.39 Q -15.22 4.94 -19.17 1.09 L -26.48 -6.03 Q -30.43 -9.89 -24.97 -10.68 L -14.87 -12.15 Q -9.40 -12.94 -6.96 -17.90 Z" fill="url(#starGoldFace)" stroke="#fffbeb" stroke-width="1.2" />
+      <!-- Curved Gloss Highlight -->
+      <path d="M -3 -24 Q 0 -30 3 -24 L 6 -17 Q 9 -12 14 -11" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.85" />
+      <!-- Center Glow Glint -->
+      <circle cx="-2" cy="-6" r="3.5" fill="#ffffff" opacity="0.8" />
+      <circle cx="4" cy="-2" r="1.8" fill="#ffffff" opacity="0.6" />
+    </g>
+  </g>
+
+  <!-- ==================== DYNAMIC GROUND SHADOW ==================== -->
+  <g id="ground-shadow" class="anim-shadow">
+    <ellipse cx="400" cy="725" rx="220" ry="36" fill="url(#shadowFloor)" />
+    <ellipse cx="400" cy="725" rx="145" ry="22" fill="url(#shadowFloorCore)" />
+  </g>
+
+  <!-- ==================== MAIN FLOATING ISLAND GROUP ==================== -->
+  <g id="island-group" class="anim-island">
+
+    <!-- Mini Floating Satellite Rocks (Floating around underbelly) -->
+    <g id="satellite-rocks">
+      <!-- Left mini rock -->
+      <g transform="translate(200, 595)">
+        <ellipse cx="0" cy="0" rx="16" ry="11" fill="#78350f" />
+        <ellipse cx="-2" cy="-2" rx="13" ry="8" fill="url(#earthStratumWarm)" />
+        <path d="M -12 -3 C -8 -9, 8 -9, 12 -3 C 6 0, -6 0, -12 -3 Z" fill="#22c55e" />
+        <ellipse cx="0" cy="-4" rx="10" ry="3" fill="#86efac" opacity="0.7" />
+      </g>
+      <!-- Right mini rock -->
+      <g transform="translate(595, 565)">
+        <ellipse cx="0" cy="0" rx="13" ry="9" fill="#5c2707" />
+        <ellipse cx="-1" cy="-1.5" rx="10" ry="6.5" fill="url(#earthStratumWarm)" />
+        <path d="M -9 -2 C -5 -7, 5 -7, 9 -2 C 4 0, -4 0, -9 -2 Z" fill="#22c55e" />
+        <ellipse cx="0" cy="-3" rx="7" ry="2" fill="#86efac" opacity="0.7" />
+      </g>
+    </g>
+
+    <!-- Island Earth Underbelly (Stratified 3D floating landmass) -->
+    <g id="island-earth-underbelly">
+      <!-- Main Earth Core Shape -->
+      <path d="M 175 450
+               C 185 520, 235 575, 285 605
+               C 330 630, 365 642, 395 644
+               C 415 644, 450 632, 490 608
+               C 545 575, 605 515, 625 435
+               C 560 460, 480 475, 400 475
+               C 320 475, 240 460, 175 450 Z"
+            fill="url(#earthBase)" />
+
+      <!-- Deep Ambient Occlusion under Grass Overhang -->
+      <path d="M 175 450
+               C 240 465, 320 480, 400 480
+               C 480 480, 560 465, 625 435
+               C 625 448, 595 490, 530 525
+               C 470 545, 350 550, 270 525
+               C 215 495, 185 465, 175 450 Z"
+            fill="url(#grassShadowUnderside)" />
+
+      <!-- Warm Terracotta Sediment Stratum (Band 1) -->
+      <path d="M 205 500
+               C 260 535, 350 550, 430 545
+               C 500 540, 565 510, 610 470
+               C 600 500, 555 545, 500 575
+               C 430 600, 340 595, 280 570
+               C 235 545, 212 520, 205 500 Z"
+            fill="url(#earthStratumWarm)" />
+
+      <!-- Soft Cream Sedimentary Rock Stratum (Band 2) -->
+      <path d="M 255 545
+               C 310 572, 380 578, 440 570
+               C 490 562, 535 540, 565 515
+               C 555 532, 520 560, 475 582
+               C 425 600, 360 602, 310 588
+               C 275 572, 260 558, 255 545 Z"
+            fill="url(#earthStratumCream)" />
+
+      <!-- Protruding Rounded Rock Facets (Left sunlight-facing) -->
+      <path d="M 235 510
+               C 255 515, 275 530, 270 545
+               C 265 558, 245 560, 230 550
+               C 218 540, 222 520, 235 510 Z"
+            fill="url(#earthHighlightLedge)" />
+      <path d="M 240 514 C 255 518, 268 530, 264 540" stroke="#fffbeb" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.8" />
+
+      <!-- Second Rock Facet (Mid-left) -->
+      <path d="M 310 575
+               C 335 580, 350 595, 345 610
+               C 340 622, 320 625, 305 615
+               C 295 605, 298 585, 310 575 Z"
+            fill="url(#earthHighlightLedge)" />
+      <path d="M 314 578 C 328 582, 342 592, 338 605" stroke="#fffbeb" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.75" />
+
+      <!-- Embedded Golden Mineral / Ore Nuggets in Cliff -->
+      <g id="gold-nugget-1">
+        <path d="M 330 550 L 342 546 L 348 555 L 340 563 L 328 558 Z" fill="url(#goldOre)" />
+        <polygon points="330,550 342,546 338,552" fill="#fffbeb" opacity="0.85" />
+      </g>
+      <g id="gold-nugget-2">
+        <circle cx="445" cy="590" r="4.5" fill="url(#goldOre)" />
+        <circle cx="443" cy="588" r="1.6" fill="#fffbeb" opacity="0.9" />
+      </g>
+
+      <!-- Dangling Roots and Green Moss Sprouts -->
+      <path d="M 242 472 C 243 486, 248 494, 247 500 C 246 504, 241 504, 241 498 C 240 492, 238 480, 237 470" fill="#15803d" />
+      <circle cx="244" cy="502" r="3" fill="#22c55e" />
+
+      <path d="M 368 492 C 369 505, 374 514, 372 520 C 371 523, 367 523, 366 518 C 365 512, 364 502, 363 490" fill="#15803d" />
+      <circle cx="369" cy="522" r="2.8" fill="#4ade80" />
+
+      <path d="M 488 485 C 490 496, 495 504, 494 510 C 493 513, 490 513, 489 508 C 487 502, 485 494, 484 483" fill="#15803d" />
+      <circle cx="492" cy="512" r="2.5" fill="#22c55e" />
+    </g>
+
+    <!-- Scalloped 3D Grass Rim Overhang (Thickness and Curving Lobes) -->
+    <g id="grass-overhang-rim">
+      <!-- Underside Thickness Band -->
+      <path d="M 170 425
+               C 170 450, 185 470, 205 475
+               C 230 480, 250 465, 270 475
+               C 290 485, 315 495, 345 495
+               C 375 495, 400 485, 425 488
+               C 455 492, 480 490, 505 480
+               C 530 472, 555 465, 575 452
+               C 605 435, 630 415, 630 405
+               L 632 418
+               C 630 435, 600 455, 572 470
+               C 545 485, 520 492, 495 498
+               C 465 506, 435 504, 410 498
+               C 385 495, 360 505, 330 505
+               C 295 505, 270 495, 250 485
+               C 230 478, 210 488, 190 482
+               C 175 478, 168 455, 168 435 Z"
+            fill="url(#grassOverhangRim)" />
+
+      <!-- Front Lush Scalloped Turf Edge -->
+      <path d="M 168 420
+               C 172 452, 192 468, 215 466
+               C 236 464, 252 452, 274 462
+               C 296 472, 318 485, 345 485
+               C 375 485, 396 472, 424 476
+               C 452 480, 475 478, 498 468
+               C 522 458, 546 452, 568 438
+               C 598 420, 630 405, 630 395
+               C 632 412, 602 432, 575 448
+               C 548 462, 525 470, 500 478
+               C 475 486, 450 488, 425 484
+               C 398 480, 375 492, 345 492
+               C 318 492, 295 478, 272 470
+               C 250 460, 232 472, 212 474
+               C 190 476, 170 456, 168 420 Z"
+            fill="#4ade80" />
+    </g>
+
+    <!-- Lush Grassy Plateau (Top Surface) -->
+    <g id="grass-plateau-surface">
+      <!-- Main Plateau Polygon -->
+      <path d="M 168 420
+               C 168 355, 245 324, 340 316
+               C 420 310, 500 295, 560 304
+               C 615 312, 638 355, 630 395
+               C 605 415, 575 435, 545 448
+               C 520 458, 495 465, 470 472
+               C 425 480, 395 472, 345 480
+               C 295 480, 260 460, 215 464
+               C 192 466, 172 450, 168 420 Z"
+            fill="url(#grassPlateau)" />
+
+      <!-- Top Hill Ridge Sunlit Highlight Arc -->
+      <path d="M 195 385
+               C 230 345, 305 325, 380 320
+               C 440 315, 500 304, 550 310
+               C 580 314, 605 330, 615 350"
+            stroke="#dcfce7" stroke-width="4.5" stroke-linecap="round" fill="none" opacity="0.65" />
+
+      <!-- Soft Lawn Contour Texture Swirls (Playful manicured terrain rings) -->
+      <path d="M 230 425 C 290 450, 390 455, 470 435 C 520 422, 565 390, 585 365"
+            stroke="#86efac" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.3" />
+      <path d="M 270 405 C 330 425, 410 428, 480 405 C 520 390, 550 365, 560 345"
+            stroke="#bbf7d0" stroke-width="4.5" stroke-linecap="round" fill="none" opacity="0.3" />
+    </g>
+
+    <!-- Nature Assets on Island: Tree, Bush and Mushrooms -->
+    <g id="nature-scenery">
+      <!-- Background Bush (Left) -->
+      <g id="bush-left" transform="translate(195, 390)">
+        <circle cx="0" cy="0" r="16" fill="url(#bushFoliage)" />
+        <circle cx="14" cy="-4" r="13" fill="url(#bushFoliage)" />
+        <circle cx="-10" cy="4" r="11" fill="url(#bushFoliage)" />
+        <!-- Highlights -->
+        <circle cx="-3" cy="-6" r="4.5" fill="#86efac" opacity="0.65" />
+        <circle cx="12" cy="-9" r="3.5" fill="#86efac" opacity="0.65" />
+      </g>
+
+      <!-- Kindergarten Puffy Tree (Back Ridge) -->
+      <g id="tree-back-ridge" transform="translate(485, 255)">
+        <!-- Trunk Shadow on Grass -->
+        <ellipse cx="0" cy="55" rx="14" ry="5" fill="#14532d" opacity="0.4" />
+        <!-- Chubby Trunk -->
+        <path d="M -7 55 C -6 40, -4 28, 0 28 C 4 28, 6 40, 7 55 Z" fill="url(#treeTrunk)" />
+        <!-- Small Branch Nub -->
+        <path d="M 3 38 C 9 35, 12 36, 14 39" stroke="#78350f" stroke-width="3" stroke-linecap="round" fill="none" />
+        <!-- 3 Puffy Overlapping Leaf Clusters -->
+        <!-- Cluster Left -->
+        <circle cx="-16" cy="12" r="22" fill="url(#treeFoliage)" />
+        <circle cx="-20" cy="5" r="7" fill="#86efac" opacity="0.55" />
+        <!-- Cluster Right -->
+        <circle cx="16" cy="10" r="20" fill="url(#treeFoliage)" />
+        <circle cx="14" cy="4" r="6" fill="#86efac" opacity="0.55" />
+        <!-- Cluster Top Center -->
+        <circle cx="0" cy="-6" r="25" fill="url(#treeFoliage)" />
+        <circle cx="-5" cy="-14" r="9" fill="#86efac" opacity="0.65" />
+        <!-- Cute Red Apple / Fruit Hanging -->
+        <circle cx="-12" cy="24" r="4.2" fill="#ef4444" />
+        <circle cx="-13" cy="22.5" r="1.3" fill="#fef08a" />
+      </g>
+
+      <!-- Cute Forest Mushrooms -->
+      <g id="mushrooms" transform="translate(442, 332)">
+        <!-- Mushroom 1 (Larger) -->
+        <ellipse cx="0" cy="10" rx="6" ry="2.5" fill="#14532d" opacity="0.3" />
+        <path d="M -3 10 C -3 5, -1 3, 0 3 C 1 3, 3 5, 3 10 Z" fill="#fffbeb" />
+        <!-- Cap -->
+        <path d="M -10 4 C -10 -4, 10 -4, 10 4 C 5 6, -5 6, -10 4 Z" fill="#f97316" />
+        <!-- Dots on Cap -->
+        <circle cx="-4" cy="0" r="1.8" fill="#ffffff" />
+        <circle cx="3" cy="-1" r="1.5" fill="#ffffff" />
+        <circle cx="1" cy="3" r="1.2" fill="#ffffff" />
+
+        <!-- Mushroom 2 (Tiny Baby) -->
+        <path d="M 8 11 C 8 8, 9 7, 10 7 C 11 7, 12 8, 12 11 Z" fill="#fffbeb" />
+        <path d="M 5 8 C 5 3, 15 3, 15 8 Z" fill="#ea580c" />
+        <circle cx="10" cy="5" r="1.1" fill="#ffffff" />
+      </g>
+
+      <!-- Grass Tufts Scatter -->
+      <g id="grass-tufts">
+        <!-- Tuft 1 -->
+        <path d="M 235 440 Q 230 432 226 430 M 235 440 Q 238 431 243 429" stroke="#16a34a" stroke-width="2.2" stroke-linecap="round" fill="none" />
+        <!-- Tuft 2 -->
+        <path d="M 330 380 Q 326 373 322 371 M 330 380 Q 333 372 338 370" stroke="#16a34a" stroke-width="2" stroke-linecap="round" fill="none" />
+        <!-- Tuft 3 -->
+        <path d="M 560 385 Q 556 377 552 375 M 560 385 Q 563 376 568 374" stroke="#16a34a" stroke-width="2" stroke-linecap="round" fill="none" />
+      </g>
+    </g>
+
+    <!-- Winding Pathway and Stepping Stones (Connecting the 3 Lesson Nodes) -->
+    <g id="winding-pathway">
+      <!-- Soft Earthen Path Ribbon Underneath -->
+      <path d="M 265 465
+               C 310 470, 335 450, 365 435
+               C 390 422, 415 418, 445 408
+               C 480 395, 510 372, 540 338"
+            stroke="#fed7aa" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.45" />
+
+      <!-- Stepping Stones (Soft Cream rounded pebbles with 3D bevels) -->
+      <!-- Stone 1 (Near Node 1) -->
+      <g transform="translate(300, 466) rotate(-8)">
+        <ellipse cx="0" cy="2" rx="13" ry="8" fill="#14532d" opacity="0.3" />
+        <ellipse cx="0" cy="1" rx="12" ry="7" fill="url(#stoneBevel)" />
+        <ellipse cx="0" cy="-0.5" rx="11" ry="6" fill="url(#stoneSurface)" />
+        <path d="M -6 -3 Q 0 -5 6 -3" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.75" />
+      </g>
+
+      <!-- Stone 2 -->
+      <g transform="translate(332, 450) rotate(10)">
+        <ellipse cx="0" cy="2" rx="11" ry="7" fill="#14532d" opacity="0.3" />
+        <ellipse cx="0" cy="1" rx="10" ry="6" fill="url(#stoneBevel)" />
+        <ellipse cx="0" cy="-0.5" rx="9" ry="5.2" fill="url(#stoneSurface)" />
+        <path d="M -5 -2.5 Q 0 -4.5 5 -2.5" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.7" />
+      </g>
+
+      <!-- Stone 3 (Approaching Active Node) -->
+      <g transform="translate(364, 434) rotate(-5)">
+        <ellipse cx="0" cy="2" rx="12" ry="7.5" fill="#14532d" opacity="0.3" />
+        <ellipse cx="0" cy="1" rx="11" ry="6.5" fill="url(#stoneBevel)" />
+        <ellipse cx="0" cy="-0.5" rx="10" ry="5.5" fill="url(#stoneSurface)" />
+        <path d="M -5 -3 Q 0 -4.8 5 -3" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.75" />
+      </g>
+
+      <!-- Stone 4 (Exiting Active Node) -->
+      <g transform="translate(452, 402) rotate(14)">
+        <ellipse cx="0" cy="2" rx="12" ry="7.5" fill="#14532d" opacity="0.3" />
+        <ellipse cx="0" cy="1" rx="11" ry="6.5" fill="url(#stoneBevel)" />
+        <ellipse cx="0" cy="-0.5" rx="10" ry="5.5" fill="url(#stoneSurface)" />
+        <path d="M -5 -3 Q 0 -4.8 5 -3" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.75" />
+      </g>
+
+      <!-- Stone 5 -->
+      <g transform="translate(482, 380) rotate(-6)">
+        <ellipse cx="0" cy="2" rx="11" ry="7" fill="#14532d" opacity="0.3" />
+        <ellipse cx="0" cy="1" rx="10" ry="6" fill="url(#stoneBevel)" />
+        <ellipse cx="0" cy="-0.5" rx="9" ry="5.2" fill="url(#stoneSurface)" />
+        <path d="M -5 -2.5 Q 0 -4.5 5 -2.5" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.7" />
+      </g>
+
+      <!-- Stone 6 -->
+      <g transform="translate(508, 360) rotate(8)">
+        <ellipse cx="0" cy="2" rx="10" ry="6.5" fill="#14532d" opacity="0.3" />
+        <ellipse cx="0" cy="1" rx="9" ry="5.5" fill="url(#stoneBevel)" />
+        <ellipse cx="0" cy="-0.5" rx="8" ry="4.8" fill="url(#stoneSurface)" />
+        <path d="M -4 -2.2 Q 0 -4 4 -2.2" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.7" />
+      </g>
+
+      <!-- Stone 7 (Approaching Locked Node) -->
+      <g transform="translate(528, 345) rotate(-4)">
+        <ellipse cx="0" cy="1.8" rx="8.5" ry="5.5" fill="#14532d" opacity="0.3" />
+        <ellipse cx="0" cy="0.8" rx="7.5" ry="4.8" fill="url(#stoneBevel)" />
+        <ellipse cx="0" cy="-0.5" rx="6.5" ry="4" fill="url(#stoneSurface)" />
+        <path d="M -3 -1.8 Q 0 -3.2 3 -1.8" stroke="#ffffff" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.65" />
+      </g>
+    </g>
+
+    <!-- Animated Tiny Flowers (Gently swaying) -->
+    <g id="animated-flowers">
+      <!-- Flower Cluster 1: Near Completed Node (Blue daisy + Cream bud) -->
+      <g id="flower-cluster-1" class="anim-flower-1">
+        <!-- Stem and Leaf -->
+        <path d="M 215 484 Q 212 472 215 463" stroke="#15803d" stroke-width="2.4" stroke-linecap="round" fill="none" />
+        <path d="M 214 474 Q 208 472 208 468 Q 212 468 214 473" fill="#22c55e" />
+        <!-- 5 Rounded Petals -->
+        <g transform="translate(215, 462)">
+          <circle cx="0" cy="-7" r="4.2" fill="url(#petalBlue)" />
+          <circle cx="6.6" cy="-2.2" r="4.2" fill="url(#petalBlue)" />
+          <circle cx="4.1" cy="5.6" r="4.2" fill="url(#petalBlue)" />
+          <circle cx="-4.1" cy="5.6" r="4.2" fill="url(#petalBlue)" />
+          <circle cx="-6.6" cy="-2.2" r="4.2" fill="url(#petalBlue)" />
+          <!-- Golden Flower Center -->
+          <circle cx="0" cy="0" r="4" fill="#facc15" stroke="#ffffff" stroke-width="0.8" />
+        </g>
+        <!-- Tiny Cream Baby Flower Beside -->
+        <circle cx="226" cy="478" r="3.2" fill="url(#petalCream)" />
+        <circle cx="226" cy="478" r="1.3" fill="#f59e0b" />
+      </g>
+
+      <!-- Flower Cluster 2: Near Center Path (Warm Coral flower) -->
+      <g id="flower-cluster-2" class="anim-flower-2">
+        <path d="M 342 474 Q 345 464 343 456" stroke="#15803d" stroke-width="2.2" stroke-linecap="round" fill="none" />
+        <g transform="translate(343, 455)">
+          <circle cx="0" cy="-6" r="3.6" fill="url(#petalOrange)" />
+          <circle cx="5.7" cy="-1.8" r="3.6" fill="url(#petalOrange)" />
+          <circle cx="3.5" cy="4.8" r="3.6" fill="url(#petalOrange)" />
+          <circle cx="-3.5" cy="4.8" r="3.6" fill="url(#petalOrange)" />
+          <circle cx="-5.7" cy="-1.8" r="3.6" fill="url(#petalOrange)" />
+          <circle cx="0" cy="0" r="3.4" fill="#fef08a" stroke="#d97706" stroke-width="0.6" />
+        </g>
+      </g>
+
+      <!-- Flower Cluster 3: Near Locked Node (Sky Blue Daisy) -->
+      <g id="flower-cluster-3" class="anim-flower-3">
+        <path d="M 590 362 Q 588 352 590 345" stroke="#15803d" stroke-width="2.2" stroke-linecap="round" fill="none" />
+        <g transform="translate(590, 344)">
+          <circle cx="0" cy="-5.5" r="3.4" fill="url(#petalBlue)" />
+          <circle cx="5.2" cy="-1.7" r="3.4" fill="url(#petalBlue)" />
+          <circle cx="3.2" cy="4.4" r="3.4" fill="url(#petalBlue)" />
+          <circle cx="-3.2" cy="4.4" r="3.4" fill="url(#petalBlue)" />
+          <circle cx="-5.2" cy="-1.7" r="3.4" fill="url(#petalBlue)" />
+          <circle cx="0" cy="0" r="3.2" fill="#facc15" stroke="#ffffff" stroke-width="0.6" />
+        </g>
+      </g>
+    </g>
+
+    <!-- ==================== THE THREE LESSON NODES ==================== -->
+
+    <!-- NODE 1: COMPLETED LESSON NODE (Fresh Green with Checkmark) -->
+    <g id="node-completed">
+      <!-- Ground Shadow -->
+      <ellipse cx="265" cy="480" rx="34" ry="14" fill="#14532d" opacity="0.38" />
+
+      <!-- 3D Pedestal Base -->
+      <path d="M 237 455
+               C 237 450, 293 450, 293 455
+               L 293 468
+               C 293 475, 237 475, 237 468 Z"
+            fill="url(#nodeGreenPedestal)" />
+
+      <!-- Outer Mint Rim -->
+      <circle cx="265" cy="454" r="28" fill="#10b981" stroke="#34d399" stroke-width="2" />
+
+      <!-- Main Green Button Dome -->
+      <circle cx="265" cy="452" r="24" fill="url(#nodeGreenDome)" />
+
+      <!-- Candy Gloss Reflection Arc -->
+      <path d="M 247 448
+               C 247 438, 283 438, 283 448
+               C 275 442, 255 442, 247 448 Z"
+            fill="#ffffff" opacity="0.65" />
+
+      <!-- 3D Checkmark (Green shadow + pure white bold checkmark) -->
+      <path d="M 254 454 L 263 463 L 278 444"
+            fill="none" stroke="#047857" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.4" />
+      <path d="M 254 452 L 263 461 L 278 442"
+            fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+
+      <!-- Occasional Sparkle Burst on Completed Node -->
+      <g id="completed-sparkle" class="anim-completed-sparkle">
+        <g transform="translate(284, 438)">
+          <path d="M 0.00 -12.00 Q 0.00 0.00 12.00 0.00 Q 0.00 0.00 0.00 12.00 Q 0.00 0.00 -12.00 0.00 Q 0.00 0.00 0.00 -12.00 Z" fill="#ffffff" stroke="#fef08a" stroke-width="0.8" />
+          <circle cx="7" cy="-7" r="1.8" fill="#ffffff" />
+          <circle cx="-6" cy="6" r="1.4" fill="#fde047" />
+        </g>
+      </g>
+    </g>
+
+    <!-- NODE 2: CURRENT / ACTIVE LESSON NODE (Warm Orange with Pulse and Play Icon) -->
+    <g id="node-active">
+      <!-- Radar Pulse Waves (Behind node) -->
+      <circle class="anim-pulse-ring-1" cx="405" cy="408" r="34" fill="none" stroke="url(#pulseRingGrad)" />
+      <circle class="anim-pulse-ring-2" cx="405" cy="408" r="34" fill="none" stroke="url(#pulseRingGrad)" />
+
+      <!-- Ground Shadow -->
+      <ellipse cx="405" cy="434" rx="42" ry="16" fill="#14532d" opacity="0.4" />
+
+      <!-- Soft Pulsing Node Body -->
+      <g id="active-node-body" class="anim-active-node">
+        <!-- 3D Pedestal Base -->
+        <path d="M 371 410
+                 C 371 404, 439 404, 439 410
+                 L 439 425
+                 C 439 433, 371 433, 371 425 Z"
+              fill="url(#nodeOrangePedestal)" />
+
+        <!-- Outer Tangerine Rim -->
+        <circle cx="405" cy="408" r="34" fill="#ea580c" stroke="#fde047" stroke-width="2.5" />
+
+        <!-- Main Orange Button Dome -->
+        <circle cx="405" cy="406" r="29" fill="url(#nodeOrangeDome)" />
+
+        <!-- Candy Gloss Reflection Arc -->
+        <path d="M 383 400
+                 C 383 388, 427 388, 427 400
+                 C 417 393, 393 393, 383 400 Z"
+              fill="#ffffff" opacity="0.7" />
+
+        <!-- Play Icon (Shadow + Pure White Rounded Play Triangle) -->
+        <path d="M 397 398
+                 C 397 395, 400 393, 403 395
+                 L 418 405
+                 C 421 407, 421 411, 418 413
+                 L 403 423
+                 C 400 425, 397 423, 397 420 Z"
+              fill="#9a3412" opacity="0.38" />
+        <path d="M 397 396
+                 C 397 393, 400 391, 403 393
+                 L 418 403
+                 C 421 405, 421 409, 418 411
+                 L 403 421
+                 C 400 423, 397 421, 397 418 Z"
+              fill="#ffffff" />
+        <!-- Play Icon Glint -->
+        <circle cx="415" cy="404" r="1.6" fill="#fef08a" />
+      </g>
+    </g>
+
+    <!-- NODE 3: LOCKED LESSON NODE (Slate Stone with 3D Golden Padlock) -->
+    <g id="node-locked">
+      <!-- Ground Shadow -->
+      <ellipse cx="540" cy="348" rx="32" ry="13" fill="#14532d" opacity="0.35" />
+
+      <!-- 3D Pedestal Base -->
+      <path d="M 514 328
+               C 514 322, 566 322, 566 328
+               L 566 339
+               C 566 346, 514 346, 514 339 Z"
+            fill="url(#nodeSlatePedestal)" />
+
+      <!-- Outer Slate Rim -->
+      <circle cx="540" cy="327" r="26" fill="#64748b" stroke="#94a3b8" stroke-width="1.8" />
+
+      <!-- Main Slate Button Dome -->
+      <circle cx="540" cy="325" r="22" fill="url(#nodeSlateDome)" />
+
+      <!-- Subtle Top Gloss Arc -->
+      <path d="M 524 321
+               C 524 313, 556 313, 556 321
+               C 548 316, 532 316, 524 321 Z"
+            fill="#ffffff" opacity="0.45" />
+
+      <!-- 3D Golden Padlock -->
+      <g id="golden-padlock" transform="translate(540, 324)">
+        <!-- Shackle Arch (Golden curved bar) -->
+        <path d="M -7 -2 V -9 C -7 -15, 7 -15, 7 -9 V -2"
+              fill="none" stroke="url(#padlockShackle)" stroke-width="4.2" stroke-linecap="round" />
+        <path d="M -7 -3 V -9 C -7 -13.5, -4 -14.5, -3 -14.5"
+              fill="none" stroke="#ffffff" stroke-width="1.4" stroke-linecap="round" opacity="0.75" />
+
+        <!-- Padlock Body (Rounded Golden Squircle) -->
+        <rect x="-12" y="-3" width="24" height="19" rx="5" fill="url(#padlockGold)" stroke="#b45309" stroke-width="1" />
+        <!-- Top Bevel Highlight -->
+        <path d="M -10 -1 H 10 C 11.5 -1, 11 1, 9 1 H -9 C -11 1, -11.5 -1, -10 -1 Z" fill="#fef08a" opacity="0.75" />
+
+        <!-- Keyhole (Circle + Slit) -->
+        <circle cx="0" cy="5" r="2.2" fill="#78350f" />
+        <polygon points="-1,5 1,5 1.5,11 -1.5,11" fill="#78350f" />
+        <!-- Keyhole Highlight Glint -->
+        <circle cx="0.8" cy="4.2" r="0.7" fill="#fef08a" />
+      </g>
+    </g>
+
+  </g> <!-- End of anim-island -->
+
+  <!-- ==================== FOREGROUND FLOATING ASSETS ==================== -->
+
+  <!-- Foreground Twinkle Sparkle near Active Node -->
+  <path id="sparkle-fg-1" class="anim-twinkle-4" d="M 465.00 370.00 Q 465.00 382.00 477.00 382.00 Q 465.00 382.00 465.00 394.00 Q 465.00 382.00 453.00 382.00 Q 465.00 382.00 465.00 370.00 Z" fill="url(#sparkleLight)" />
+
+  <!-- Foreground Twinkle Sparkle near Earth Base -->
+  <path id="sparkle-fg-2" class="anim-twinkle-5" d="M 475.00 585.00 Q 475.00 595.00 485.00 595.00 Q 475.00 595.00 475.00 605.00 Q 475.00 595.00 465.00 595.00 Q 475.00 595.00 475.00 585.00 Z" fill="url(#sparkleLight)" />
+
+  <!-- Floating Golden Star 2 (Medium Right) -->
+  <g id="star-2" class="anim-star-2">
+    <g transform="translate(625, 215)">
+      <!-- 3D Bevel Base -->
+      <path d="M -1.91 -17.33 Q 0.00 -21.20 1.91 -17.33 L 5.44 -10.18 Q 7.35 -6.31 11.62 -5.69 L 19.50 -4.55 Q 23.78 -3.93 20.69 -0.91 L 14.98 4.65 Q 11.89 7.66 12.62 11.92 L 13.96 19.77 Q 14.69 24.03 10.87 22.02 L 3.82 18.31 Q 0.00 16.30 -3.82 18.31 L -10.87 22.02 Q -14.69 24.03 -13.96 19.77 L -12.62 11.92 Q -11.89 7.66 -14.98 4.65 L -20.69 -0.91 Q -23.78 -3.93 -19.50 -4.55 L -11.62 -5.69 Q -7.35 -6.31 -5.44 -10.18 Z" fill="url(#starGoldBase)" />
+      <!-- Star Face -->
+      <path d="M -1.91 -21.13 Q 0.00 -25.00 1.91 -21.13 L 5.44 -13.98 Q 7.35 -10.11 11.62 -9.49 L 19.50 -8.35 Q 23.78 -7.73 20.69 -4.71 L 14.98 0.85 Q 11.89 3.86 12.62 8.12 L 13.96 15.97 Q 14.69 20.23 10.87 18.22 L 3.82 14.51 Q 0.00 12.50 -3.82 14.51 L -10.87 18.22 Q -14.69 20.23 -13.96 15.97 L -12.62 8.12 Q -11.89 3.86 -14.98 0.85 L -20.69 -4.71 Q -23.78 -7.73 -19.50 -8.35 L -11.62 -9.49 Q -7.35 -10.11 -5.44 -13.98 Z" fill="url(#starGoldFace)" stroke="#fffbeb" stroke-width="1" />
+      <!-- Pillowy Highlight -->
+      <path d="M -2.5 -19 Q 0 -24 2.5 -19 L 5 -14 Q 7 -10 11 -9" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round" fill="none" opacity="0.85" />
+      <circle cx="-1.5" cy="-5" r="2.8" fill="#ffffff" opacity="0.8" />
+    </g>
+  </g>
+  <path id="sparkle-star-2" class="anim-twinkle-2" d="M 680.00 171.00 Q 680.00 185.00 694.00 185.00 Q 680.00 185.00 680.00 199.00 Q 680.00 185.00 666.00 185.00 Q 680.00 185.00 680.00 171.00 Z" fill="url(#sparkleLight)" />
+
+  <!-- Fluffy Cloud (Front Right, drifts across lower right island) -->
+  <g id="cloud-front" class="anim-cloud-front">
+    <rect x="585" y="500" width="105" height="34" rx="17" fill="url(#cloudWarmBounce)" />
+    <circle cx="608" cy="494" r="22" fill="url(#cloudWarmBounce)" />
+    <circle cx="636" cy="478" r="28" fill="url(#cloudWarmBounce)" />
+    <circle cx="664" cy="496" r="20" fill="url(#cloudWarmBounce)" />
+    <!-- Underside peach bounce light -->
+    <path d="M 598 518 C 625 526, 665 526, 680 518" stroke="#fed7aa" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.45" />
+    <!-- Sunlit Top Highlight Rim -->
+    <path d="M 620 468 C 636 462, 652 468, 660 476" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.9" />
+  </g>
+
+</svg>
