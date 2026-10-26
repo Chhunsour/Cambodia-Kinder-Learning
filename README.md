@@ -1,5 +1,17 @@
 # Cambodia Kinder Learning (Koki) 🇰🇭 🐵
 
+<p align="center">
+  <sub>Developed by <strong>Seng Chhunsour</strong></sub>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Chhunsour"><img src="https://img.shields.io/badge/Author-Seng%20Chhunsour-FF5A1F?style=flat-square&logo=github&logoColor=white" alt="Author: Seng Chhunsour" /></a>
+  <img src="https://img.shields.io/badge/Framework-React%20Native%20%7C%20Expo%20SDK%2057-blue?style=flat-square&logo=expo&logoColor=white" alt="Expo" />
+  <img src="https://img.shields.io/badge/Storage-Offline%20SQLite%20%7C%20Supabase-3ECF8E?style=flat-square" alt="Storage" />
+  <img src="https://img.shields.io/badge/Platform-iOS%20%7C%20Android-purple?style=flat-square" alt="Platforms" />
+  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="MIT License" />
+</p>
+
 A Cambodia-first educational mobile game built with **React Native** and **Expo (SDK 57)** designed for children ages **3–9**. Koki teaches Khmer script, numbers, phonics, vocabulary, and early English through gamified, offline-first adventures.
 
 ---
@@ -118,6 +130,14 @@ npm run typecheck
 
 ---
 
+## 👤 Author & Developer
+
+**Developed by Seng Chhunsour**
+- **GitHub:** [@Chhunsour](https://github.com/Chhunsour)
+- **Repository:** [https://github.com/Chhunsour/Cambodia-Kinder-Learning](https://github.com/Chhunsour/Cambodia-Kinder-Learning)
+
+---
+
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+Personal and open-source project. Developed by Seng Chhunsour. Distributed under the [MIT License](LICENSE).
